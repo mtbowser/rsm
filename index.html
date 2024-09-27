@@ -1,163 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap&family=Noto+Emoji:wght@300..700&display=swap"" rel="stylesheet">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap&family=Noto+Emoji:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Two-Column Resume - Maria Bowser</title>
     <style>
-        body {
-            font-family: 'Golos Text', sans-serif;
-            background-color: rgb(66, 107, 82);
-            color: #92b598;
-        }
+      body {
+        font-family: "Golos Text", sans-serif;
+        background-color: rgb(66, 107, 82);
+        color: #92b598;
+        margin: 0;
+        padding: 0;
+      }
 
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .left-column,
+      .right-column {
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .left-column {
+        width: 30%;
+        border-right: 2px solid #ccc;
+      }
+
+      .right-column {
+        width: 65%;
+      }
+
+      .profile-pic {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        margin-bottom: 20px;
+      }
+
+      .bio {
+        margin-top: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #c9c5a7;
+        font-weight: 400;
+      }
+
+      a {
+        color: #d3d1a8;
+        text-decoration: none;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 5px;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      /* Mobile Optimization */
+      @media (max-width: 768px) {
         .container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+          flex-direction: column;
+          padding: 10px;
         }
 
-        .left-column {
-            width: 30%;
-            padding-right: 20px;
-            padding-left:10px;z
-            border-right: 2px solid #ccc;
-        }
-
+        .left-column,
         .right-column {
-            width: 65%;
-            padding-left: 20px;
+          width: 100%;
+          padding: 10px;
+          border: none;
         }
 
         .profile-pic {
-            width: 100%;
-            height: auto;
-            border-radius: 0%;
-            padding: 5%
+          width: 50%;
+          margin: 0 auto;
         }
 
-        .bio {
-            margin-top: 20px;
+        h1,
+        h2,
+        h3 {
+          text-align: center;
         }
 
-        h1, h2, h3 {
-            color: #c9c5a7;
-            font-weight: 400;
-        }
         a {
-
-            color: #d3d1a8;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 5px;
+          display: block;
+          text-align: center;
+          margin-top: 10px;
         }
 
         ul li {
-            margin-bottom: 10px;
+          font-size: 14px;
         }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- Left Column -->
-        <div class="left-column">
-            <img src="pic.png" alt="my dog and i " class="profile-pic">
-            <div class="bioM">
-                <h2>Maria Bowser</h2>
-                <p>TS/SCI Software / Reverse  Engineer<br>Northern VA</p>
-                
-                <a href="mailto:m.sbk@icloud.com">email me</a></p>
-                <h3>Skills</h3>
-                <ul>
-                    <li>Software Engineering </li>
-                    <li>Reverse Engineering </li>
-                    <li>Web Development</li>
-                     <li>Communication</li>
-                    <li>Python, C, Java, JS, html, CSS, rust</li>
-                    <li>Linux</li>
-                    <li>Russian</li>
-                    <li>Japanese</li>
-                    <li> UX /  UI</li>
-                    <li>Test Driven Development</li>
-                    <li>Agile/Scrum</li>
-                    <li>Git</li>
-                    <li>Networking</li>
-                    <li>Splunk</li>
-                    <li>Wireshark</li>
-                    <li>Optimization and automation</li>
-                    <li> Computer Systems</li>
-
-        
-            </ul>
-        </div> </div>
-
-        <!-- Right Column -->
-        <div class="right-column">
-        
-            <h2>Employment Experience</h2>
-
-            <h3>Reverse Engineer and Vulnerability Researcher | Verite Group Inc</h3>
-            <p><em>Dulles, VA | 2024 - Present</em></p>
-            <ul>
-                <li>Led the Reverse engineering efforts for CNO Operational team </li>
-                <li> Independently automated static and dynamic software vulnerability analysis on mesh archietecture next-generation software</li>
-                <li>Used Ghidra, valgrind, bash scripting/gdb/gcc as well as netwokring tools to identify crucial vulnerabilities and attack surfaces</li>
-                <li>Developed automation scripts in Python for large-scale decompilation and analysis of over 300 binaries </li>
-                <li>Provided enterprise  level solutions to CNO operations team in airgapped environments</li>
-                <li> Brought software and linguistic expertise to offensive cyber landscape </li>
-            </ul>
-
-            <h3>Deloitte | Software Engineering Consultant</h3>
-            <p><em>DC Metropolitan Area | Jun 2021 - May 2024</em></p>
-            <ul>
-                <li>Full-stack software development in enterprise air-gapped environments, software optimization reducing processing speed by 700%</li>
-                <li>Low-level software optimization providing custom programs to 100+ end users.</li>
-                <li>Developed command and control server with CLI in Python for Red Team operations.</li>
-                <li>Designed and implemented custom modular CSS/JS/HTML for cybersecurity web app operations.</li>
-                <li>Led high-side development for Cyber Business and Operations team.</li>
-                <li>Network intrusion detection using Wireshark.</li>
-                <li>Won company-wide OSINT capture the flag (October 2023).</li>
-                <li>Performed reverse engineering on various software to identify vulnerabilities and improve system security.</li>
-            </ul>
-
-            <h3>PioneerTech | Software Engineer (Backend)</h3>
-            <p><em>Fairfax, VA | Jan 2021 - Jun 2021</em></p>
-            <ul>
-                <li>Full-stack Java Enterprise development for high-security Oracle projects.</li>
-                <li>Enhanced software reliability through modernization of legacy frameworks and database debugging.</li>
-                <li> Primarily backend SLDC agile environment </li>
-                <li>Led digital transformation of legacy systems for security improvement.</li>
-            </ul>
-
-            <h3>Concept Plus | Software Engineer (Java)</h3>
-            <p><em>Fairfax, VA | Mar 2020 - Aug 2020</em></p>
-            <ul>
-                <li>Developed software for the DOEHRS-HC contract supporting DoD personnel health readiness.</li>
-                <li>Managed full stack database backend integration and service layer mechanics.</li>
-                <li>Conducted daily sprints in Agile software development for debugging and enhancements.</li>
-            </ul>
-
-            <h3>Perspecta Inc | System Engineer</h3>
-            <p><em>Chantilly, VA | Jan 2019 - Jun 2019</em></p>
-            <ul>
-                <li>Engineered data solutions using mobile time-location-based data.</li>
-                <li>Researched digital footprint of activity-based intelligence.</li>
-                <li>Integrated blockchain into healthcare data file management.</li>
-                <li>Participated in Agile SAFe & UiPath training to enhance team efficiency.</li>
-            </ul>
-
-            <h2>Education</h2>
-            <p><strong>Virginia Tech College of Math & Science</strong><br>
-            B.A. in Economics (Concentration in Computer Science) & Minor in Statistics | 2013 - 2018</p>
-
-            
+      <!-- Left Column -->
+      <div class="left-column">
+        <img src="pic.png" alt="my dog and i " class="profile-pic" />
+        <div class="bio">
+          <h2>Maria Bowser</h2>
+          <p>TS/SCI Software / Reverse Engineer<br />Northern VA</p>
+          <a href="mailto:m.sbk@icloud.com">email me</a>
+          <h3>Skills</h3>
+          <ul>
+            <li>Software Engineering</li>
+            <li>Reverse Engineering</li>
+            <li>Web Development</li>
+            <li>Communication</li>
+            <li>Python, C, Java, JS, HTML, CSS, Rust</li>
+            <li>Linux</li>
+            <li>Russian</li>
+            <li>Japanese</li>
+            <li>UX / UI</li>
+            <li>Test Driven Development</li>
+            <li>Agile/Scrum</li>
+            <li>Git</li>
+            <li>Networking</li>
+            <li>Splunk</li>
+            <li>Wireshark</li>
+            <li>Optimization and automation</li>
+            <li>Computer Systems</li>
+          </ul>
         </div>
-    </div>
-</body>
-</html>
+      </div>
 
+      <!-- Right Column -->
+      <div class="right-column">
+        <h2>Employment Experience</h2>
+        <h3>
+          Reverse Engineer and Vulnerability Researcher | Verite Group Inc
+        </h3>
+        <p><em>Dulles, VA | 2024 - Present</em></p>
+        <ul>
+          <li>Led the reverse engineering efforts for CNO Operational team.</li>
+          <li>
+            Independently automated static and dynamic software vulnerability
+            analysis on mesh architecture next-generation software.
+          </li>
+          <li>
+            Used Ghidra, Valgrind, Bash scripting/gdb/gcc as well as networking
+            tools to identify crucial vulnerabilities and attack surfaces.
+          </li>
+          <li>
+            Developed automation scripts in Python for large-scale decompilation
+            and analysis of over 300 binaries.
+          </li>
+          <li>
+            Provided enterprise-level solutions to CNO operations team in
+            air-gapped environments.
+          </li>
+          <li>
+            Brought software and linguistic expertise to offensive cyber
+            landscape.
+          </li>
+        </ul>
+
+        <h3>Deloitte | Software Engineering Consultant</h3>
+        <p><em>DC Metropolitan Area | Jun 2021 - May 2024</em></p>
+        <ul>
+          <li>
+            Full-stack software development in enterprise air-gapped
+            environments, software optimization reducing processing speed by
+            700%.
+          </li>
+          <li>
+            Low-level software optimization providing custom programs to 100+
+            end users.
+          </li>
+          <li>
+            Developed command and control server with CLI in Python for Red Team
+            operations.
+          </li>
+          <li>
+            Designed and implemented custom modular CSS/JS/HTML for
+            cybersecurity web app operations.
+          </li>
+          <li>
+            Led high-side development for Cyber Business and Operations team.
+          </li>
+          <li>Network intrusion detection using Wireshark.</li>
+          <li>Won company-wide OSINT capture the flag (October 2023).</li>
+          <li>
+            Performed reverse engineering on various software to identify
+            vulnerabilities and improve system security.
+          </li>
+        </ul>
+
+        <h3>PioneerTech | Software Engineer (Backend)</h3>
+        <p><em>Fairfax, VA | Jan 2021 - Jun 2021</em></p>
+        <ul>
+          <li>
+            Full-stack Java Enterprise development for high-security Oracle
+            projects.
+          </li>
+          <li>
+            Enhanced software reliability through modernization of legacy
+            frameworks and database debugging.
+          </li>
+          <li>Primarily backend SLDC agile environment.</li>
+          <li>
+            Led digital transformation of legacy systems for security
+            improvement.
+          </li>
+        </ul>
+
+        <h3>Concept Plus | Software Engineer (Java)</h3>
+        <p><em>Fairfax, VA | Mar 2020 - Aug 2020</em></p>
+        <ul>
+          <li>
+            Developed software for the DOEHRS-HC contract supporting DoD
+            personnel health readiness.
+          </li>
+          <li>
+            Managed full stack database backend integration and service layer
+            mechanics.
+          </li>
+          <li>
+            Conducted daily sprints in Agile software development for debugging
+            and enhancements.
+          </li>
+        </ul>
+
+        <h3>Perspecta Inc | System Engineer</h3>
+        <p><em>Chantilly, VA | Jan 2019 - Jun 2019</em></p>
+        <ul>
+          <li>
+            Engineered data solutions using mobile time-location-based data.
+          </li>
+          <li>Researched digital footprint of activity-based intelligence.</li>
+          <li>Integrated blockchain into healthcare data file management.</li>
+          <li>
+            Participated in Agile SAFe & UiPath training to enhance team
+            efficiency.
+          </li>
+        </ul>
+
+        <h2>Education</h2>
+        <p>
+          <strong>Virginia Tech College of Math & Science</strong><br />
+          B.A. in Economics (Concentration in Computer Science) & Minor in
+          Statistics | 2013 - 2018
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
