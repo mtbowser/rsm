@@ -10,7 +10,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Two-Column Resume - Maria Bowser</title>
+    <title>Resume - Maria Bowser</title>
     <style>
       body {
         font-family: "Golos Text", sans-serif;
@@ -36,7 +36,7 @@
 
       .left-column {
         width: 30%;
-        border-right: 2px solid #ccc;
+        
       }
 
       .right-column {
@@ -65,6 +65,10 @@
         color: #d3d1a8;
         text-decoration: none;
         text-align: left;
+        font-style: italic;
+        display:flex;
+        align-items: space-between;
+
       }
 
       ul {
@@ -82,11 +86,13 @@
           flex-direction: column;
           padding: 10px;
         }
-
+        container* {
+          padding: 0;
+        }
         .left-column,
         .right-column {
           width: 100%;
-          padding: 10px;
+          padding: 0px;
           border: none;
         }
 
@@ -99,23 +105,33 @@
         h2,
         h3 {
           text-align: left;
-
+        }
           a {
             display: block;
             margin-top: 10px;
             margin-bottom: 10px;
           }
+        
+          ul li {
+        display: contents;
+      }
+            
+        ul li::after {
+            font-size: 14px;
+            margin: none;
+            display: contents;
+            content: ", "; /* Add comma and space after each list item */
         }
 
-        ul li {
-          font-size: 14px;
-          margin: none;
-          display: contents;
+        ul li:last-child::after {
+            content: ""; /* Remove the comma after the last list item */
         }
-        p {
+          p {
           margin: 0px;
         }
 
+}
+      
         /* Print-specific styles */
         @media print {
           body {
@@ -150,38 +166,35 @@
           }
         }
       }
+    }
     </style>
   </head>
   <body>
     <div class="container">
       <!-- Left Column -->
       <div class="left-column">
-        <img src="pic.png" alt="my dog and i " class="profile-pic" />
+        <img src="pic_clear.png" alt="my dog and i " class="profile-pic" />
         <div class="bio">
           <h2>Maria Bowser</h2>
           <p>
-            TS/SCI Software / Reverse Engineer<br />Northern VA, non-remote OK
+            TS/SCI Software + Reverse Engineer<br />Northern VA, non-remote OK
           </p>
           <a href="mailto:m.sbk@icloud.com">email me</a>
-          <a htref="https://linked.in.com/cybrat">linkedin </a>
-          <a href="Maria_Bowser_Resume.docx" download> word doc</a
+          <a htref="https://linkedin.com/cybrat">linkedin </a>
+          <a href="Maria_Bowser_Resume.docx" download> word doc</a>
           <h3>Skills</h3>
           <ul>
-            <li>Software and Reverse Engineering</li>
-            <li>Web Development</li>
-            <li>Communication</li>
+            <li>Software Development</li>
+            <li>Reverse Engineering</li>
+            <li>Vulnerability Analysis</li>
+            <li> UX and UI</li>
             <li>Python, C, Java, JS, HTML, CSS, Rust, Linux</li>
-
             <li>Russian</li>
-            <li>Japanese</li>
+            <li> Japanese</li> 
             <li>UX / UI</li>
-            <li>Agile/Scrum</li>
-            <li>Git</li>
-            <li>Networking</li>
-            <li>Splunk</li>
-            <li>Wireshark</li>
-            <li>Optimization and automation</li>
-            <li>Computer Systems</li>
+            <li> Communicatons </li>
+            <li>Computer Networking </li>
+           
           </ul>
         </div>
       </div>
@@ -194,30 +207,24 @@
         </h3>
         <p><em>Dulles, VA | 2024 - Present</em></p>
         <ul>
-          <li>Led the reverse engineering efforts for CNO Operational team.</li>
+          <li>Led reverse engineering arm of the cyber operations team </li>
           <li>
-            Independently automated static and dynamic software vulnerability
-            analysis on mesh architecture next-generation software.
+            Utilized Ghidra, Valgrind, Bash scripting, gdb and gcc as well as networking
+            tools to curate a toolchain to identify crucial vulnerabilities and attack surface in fieds of mesh architecture, distributed systems, and embedded systems.
+           </li><li> Automated the decompilation of statically linked binaries, enabling headless extraction of vulnerable operations from deeply nested layers of code.
+ </li>
+         
+           Developed Python automation scripts for large-scale binary decompilation and analysis, as well as Bash scripts to facilitate vulnerability assessments in mesh architecture software.
           </li>
           <li>
-            Used Ghidra, Valgrind, Bash scripting/gdb/gcc as well as networking
-            tools to identify crucial vulnerabilities and attack surfaces.
+            Delivered enterprise-level solutions for the CNO operations team in air-gapped environments, managing fast-paced, day-to-day operations.
           </li>
           <li>
-            Developed automation scripts in Python for large-scale decompilation
-            and analysis of over 300 binaries.
-          </li>
-          <li>
-            Provided enterprise-level solutions to CNO operations team in
-            air-gapped environments.
-          </li>
-          <li>
-            Brought software and linguistic expertise to offensive cyber
-            landscape.
+         Brought advanced software and linguistic expertise to the offensive cyber landscape.
           </li>
         </ul>
 
-        <h3>Deloitte | Software Engineering Consultant</h3>
+        <h3>Deloitte GPS | Software Engineering Consultant</h3>
         <p><em>DC Metropolitan Area | Jun 2021 - May 2024</em></p>
         <ul>
           <li>
