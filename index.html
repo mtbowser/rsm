@@ -115,6 +115,40 @@
         p {
           margin: 0px;
         }
+
+        /* Print-specific styles */
+        @media print {
+          body {
+            background-color: white;
+            color: black;
+            font-size: 12pt;
+          }
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+
+          .profile-pic {
+            display: none; /* Hide image for printing to save space */
+          }
+
+          .container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+          }
+
+          .left-column,
+          .right-column {
+            border: none;
+            padding: 0;
+          }
+
+          ul li {
+            font-size: 12pt;
+          }
+        }
       }
     </style>
   </head>
@@ -129,6 +163,8 @@
             TS/SCI Software / Reverse Engineer<br />Northern VA, non-remote OK
           </p>
           <a href="mailto:m.sbk@icloud.com">email me</a>
+          <a htref="https://linked.in.com/cybrat">linkedin </a>
+          <a href="Maria_Bowser_Resume.docx" download> word doc</a
           <h3>Skills</h3>
           <ul>
             <li>Software and Reverse Engineering</li>
