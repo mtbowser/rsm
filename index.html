@@ -7,6 +7,9 @@
       href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap&family=Noto+Emoji:wght@300..700&display=swap"
       rel="stylesheet"
     />
+<!-- Load GSAP and ScrollTrigger from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -184,43 +187,41 @@
           <a href="Maria_Bowser_Resume.docx" download> word doc</a>
           <h3>Skills</h3>
           <ul>
-            <li>Software Development</li>
+            <li>Software Development</li> 
+        
             <li>Reverse Engineering</li>
-            <li>Vulnerability Analysis</li>
             <li> UX and UI</li>
-            <li>Python, C, Java, JS, HTML, CSS, Rust, Linux</li>
+            <li>Python, C, Java, JS, HTML, CSS,  Linux</li>
             <li>Russian</li>
             <li> Japanese</li> 
-            <li>UX / UI</li>
             <li> Communicatons </li>
             <li>Computer Networking </li>
-           
           </ul>
         </div>
       </div>
 
       <!-- Right Column -->
-      <div class="right-column">
+      <div class="right-column" data-speed="0.8">
         <h2>Employment Experience</h2>
         <h3>
           Reverse Engineer and Vulnerability Researcher | Verite Group Inc
         </h3>
-        <p><em>Dulles, VA | 2024 - Present</em></p>
+        <p><em>Dulles, VA | July 2024 - October 2024  </em></p>
         <ul>
           <li>Led reverse engineering arm of the cyber operations team </li>
           <li>
             Utilized Ghidra, Valgrind, Bash scripting, gdb and gcc as well as networking
-            tools to curate a toolchain to identify crucial vulnerabilities and attack surface in fieds of mesh architecture, distributed systems, and embedded systems.
+            tools to curate a toolchain to identify crucial vulnerabilities and enumerate surfaces in fieds of mesh architecture, distributed systems, and embedded systems.
            </li><li> Automated the decompilation of statically linked binaries, enabling headless extraction of vulnerable operations from deeply nested layers of code.
  </li>
          
-           Developed Python automation scripts for large-scale binary decompilation and analysis, as well as Bash scripts to facilitate vulnerability assessments in mesh architecture software.
+           Developed Python automation scripts for large-scale binary decompilation and analysis, as well as Bash scripts to facilitate vulnerability assessments in distributed architecture software.
           </li>
           <li>
-            Delivered enterprise-level solutions for the CNO operations team in air-gapped environments, managing fast-paced, day-to-day operations.
+            Delivered enterprise-level solutions for the  operations team in air-gapped environments, managing fast-paced, day-to-day operations.
           </li>
           <li>
-         Brought advanced software and linguistic expertise to the offensive cyber landscape.
+         Brought advanced software and linguistic expertise to the cyber landscape.
           </li>
         </ul>
 
@@ -312,5 +313,6 @@
         </p>
       </div>
     </div>
+    <script src ="script.js"></script>
   </body>
 </html>
