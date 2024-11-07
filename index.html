@@ -4,21 +4,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap&family=Noto+Emoji:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap&family=Noto+Emoji:wght@300..700&display=swap"
       rel="stylesheet"
     />
-<!-- Load GSAP and ScrollTrigger from CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Load GSAP and ScrollTrigger from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume - Maria Bowser</title>
     <style>
       body {
-        font-family: "Golos Text", sans-serif;
-        background-color: rgb(66, 107, 82);
-        color: #92b598;
+        font-family: "Inter", sans-serif;
+        background-color: rgb(255, 255, 255);
+        color: #000000;
         margin: 0;
         padding: 0;
       }
@@ -39,12 +39,42 @@
 
       .left-column {
         width: 30%;
-        
       }
+
+      h1{
+
+
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+
+
+      }
+
+      h2 {
+
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0px;
+        }
+
 
       .right-column {
         width: 65%;
       }
+      p {
+        font-size: 1rem;
+        line-height: 1.3;
+        font-family: "Inter", sans-serif;"
+        ;}
+
 
       .profile-pic {
         width: 100%;
@@ -56,22 +86,30 @@
       .bio {
         margin-top: 20px;
       }
+      .em{
+
+        font-style: italic;
+        font-size: 1rem;
+        margin-bottom: 10px;
+
+
+      }
+
 
       h1,
       h2,
       h3 {
-        color: #c9c5a7;
+        color: #000000;
         font-weight: 400;
       }
 
       a {
-        color: #d3d1a8;
-        text-decoration: none;
+        color: #7487e9;
+        text-decoration: underline;
         text-align: left;
         font-style: italic;
-        display:flex;
+        display: flex;
         align-items: space-between;
-
       }
 
       ul {
@@ -82,13 +120,11 @@
       ul li {
         margin-bottom: 10px;
       }
-      .footer{
-
+      .footer {
         text-align: right;
-    padding: 1rem;
-    font-size: smaller;
-    opacity: .7;
-
+        padding: 1rem;
+        font-size: smaller;
+        opacity: 0.7;
       }
       /* Mobile Optimization */
       @media (max-width: 768px) {
@@ -116,68 +152,61 @@
         h3 {
           text-align: left;
         }
-          a {
-            display: block;
-            margin-top: 10px;
-            margin-bottom: 10px;
-          }
-        
-          ul li {
-        display: contents;
-      }
-            
+        a {
+          display: block;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+
+        ul li {
+          display: contents;
+        }
+
         ul li::after {
-            font-size: 14px;
-            margin: none;
-            display: contents;
-            content: ", "; /* Add comma and space after each list item */
+          font-size: 14px;
+          margin: none;
+          display: contents;
+          content: ", "; /* Add comma and space after each list item */
         }
 
         ul li:last-child::after {
-            content: ""; /* Remove the comma after the last list item */
-        }
-          p {
-          margin: 0px;
+          content: ""; /* Remove the comma after the last list item */
         }
 
-}
-      
-        /* Print-specific styles */
-        @media print {
-          body {
-            background-color: white;
-            color: black;
-            font-size: 12pt;
-          }
 
-          a {
-            text-decoration: none;
-            color: black;
-          }
-
-          .profile-pic {
-            display: none; /* Hide image for printing to save space */
-          }
-
-          .container {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-          }
-
-          .left-column,
-          .right-column {
-            border: none;
-            padding: 0;
-          }
-         
-
-          ul li {
-            font-size: 12pt;
-          }
+      /* Print-specific styles */
+      @media print {
+        body {
+          background-color: white;
+          color: black;
+          font-size: 12pt;
         }
-      
-    
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        .profile-pic {
+          display: none; /* Hide image for printing to save space */
+        }
+
+        .container {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        .left-column,
+        .right-column {
+          border: none;
+          padding: 0;
+        }
+
+        ul li {
+          font-size: 12pt;
+        }
+      }
     </style>
   </head>
   <body>
@@ -188,139 +217,109 @@
         <div class="bio">
           <h2>Maria Bowser</h2>
           <p>
-            TS/SCI CI Poly Software + Reverse Engineer<br />Northern VA, non-remote OK
+            TS/SCI CI Poly Software + Reverse Engineer<br />Northern VA,
+            non-remote OK
           </p>
-          <a href="mailto:m.sbk@icloud.com">email me</a>
+          <a href="mailto:m.sbk@icloud.com"
+            >write email to me @ m.sbk@icloud.com</a
+          >
           <a htref="https://linkedin.com/cybrat">linkedin </a>
-          <a href="maria_bowser_october_resume.docx" download> WORD DOC </a>
-          <h3>Skills</h3>
-         <ul class="box">
-            <li>Software Development</li> 
-            <li>Reverse Engineering</li>
-            <li> UX and UI</li>
-            <li>Python, C, Java, JS, HTML, CSS, Go</li>
-            <li> Ghidra, Valgrind, gdb, gcc</li>
-            <li> Linux </li>
-            </ul>
-            <ul class="box">
+          <a href=".docx" download> get resume pdf </a>
 
-            <li> Bash scripting</li>
-            <li> Networking</li>
-            <li> Cybersecurity</li>
-            <li> OSINT</li>
-            <li> Wireshark</li>
+          <h3>Skills</h3>
+          <ul class="box">
+            <li>Software Engineering</li>
+            <li>Reverse Engineering</li>
+            <li>UX and UI</li>
+            <li>Python, C, Java, JS, HTML, CSS, Go</li>
+            <li>Ghidra, Valgrind, gdb, gcc</li>
+            <li>Linux</li>
+          </ul>
+          <ul class="box">
+            <li>Bash scripting</li>
+            <li>Networking</li>
+            <li>Cybersecurity</li>
+            <li>3D / AI Rendering</li>
+            <li>Wireshark</li>
             <li>Russian</li>
-            <li> Japanese</li> 
-            <li> Communications </li>
-            <li>Computer Networking </li>
+            <li>Japanese</li>
+            <li>Communications</li>
+            <li>Computer Networking</li>
           </ul>
         </div>
       </div>
 
       <!-- Right Column -->
       <div class="right-column" data-speed="0.8">
+        <p>
+          With over 5 years of progressive experience in full-stack software
+          engineering, I have consistently advanced in roles that prioritize
+          Agile methodology, cybersecurity, and high-security software
+          development within the Intelligence Community. My background includes
+          leading digital transformation initiatives and fostering innovation
+          across cloud, standard, and secured environments. Recently, I applied
+          my expertise to reverse engineering, further demonstrating my in-depth
+          conceptual skills and adaptability. I bring a diverse, well-rounded,
+          and enthusiastic approach to mission-critical projects, with a focus
+          on delivering impactful, secure, and efficient solutions.
+        </p>
         <h2>Employment Experience</h2>
         <h3>
-          Reverse Engineer and Vulnerability Researcher | Verite Group Inc
+          Reverse Engineer and Vulnerability Researcher | VGI | Cyber Operations
         </h3>
-        <p><em>Dulles, VA | July 2024 - October 2024  </em></p>
-        <ul>
-          <li>Led reverse engineering arm of the cyber operations team </li>
-          <li>
-            Utilized Ghidra, Valgrind, Bash scripting, gdb and gcc as well as networking
-            tools to curate a toolchain to identify crucial vulnerabilities and enumerate surfaces in fields of mesh architecture, distributed systems, and embedded systems.
-           </li><li> Automated the decompilation of statically linked binaries, enabling headless extraction of vulnerable operations from deeply nested layers of code.
- </li>
-         
-           Developed Python automation scripts for large-scale binary decompilation and analysis, as well as Bash scripts to facilitate vulnerability assessments in distributed architecture software.
-          </li>
-          <li>
-            Delivered enterprise-level solutions for the  operations team in air-gapped environments, managing fast-paced, day-to-day operations.
-          </li>
-          <li>
-         Brought advanced software and linguistic expertise to the cyber landscape.
-          </li>
-        </ul>
+        <p><em> Dulles, VA | July 2024 - October 2024</em></p>
+        Led reverse engineering initiatives for the cyber operations team,
+        creating a specialized toolchain with Ghidra, Valgrind, gdb, gcc, and
+        networking tools to uncover vulnerabilities in mesh architecture,
+        distributed systems, and embedded systems. Automated decompilation of
+        complex binaries, developing Python and Bash scripts for large-scale
+        analysis. These scripts enhanced vulnerability assessments across
+        distributed architectures, showcasing automation and backend expertise.
+        Delivered enterprise-grade solutions in air-gapped environments,
+        emphasizing secure, isolated system development—a critical skill for
+        secure full-stack deployments. Contributed linguistic and software
+        expertise to cyber operations, supporting diverse and high-stakes
+        cybersecurity initiatives.
 
         <h3>Deloitte GPS | Software Engineering Consultant</h3>
         <p><em>DC Metropolitan Area | Jun 2021 - May 2024</em></p>
-        <ul>
-          <li>
-            Full-stack software development in enterprise air-gapped
-            environments, software optimization reducing processing speed by
-            700%.
-          </li>
-          <li>
-            Low-level software optimization providing custom programs to 100+
-            end users.
-          </li>
-          <li>
-            Developed command and control server with CLI in Python for Red Team
-            operations.
-          </li>
-          <li>
-            Designed and implemented custom modular CSS/JS/HTML for
-            cybersecurity web app operations.
-          </li>
-          <li>
-            Led high-side development for Cyber Business and Operations team.
-          </li>
-          <li>Network intrusion detection using Wireshark.</li>
-          <li>Won company-wide OSINT capture the flag (October 2023).</li>
-          <li>
-            Performed reverse engineering on various software to identify
-            vulnerabilities and improve system security.
-          </li>
-        </ul>
+        Performed full-stack software development in secure, air-gapped
+        environments, optimizing processing speed by 700% and creating efficient
+        backend solutions. Developed command-and-control servers with Python CLI
+        for Red Team operations, reinforcing backend automation and command
+        execution skills valuable in full-stack roles. Designed modular
+        CSS/JS/HTML for cybersecurity web applications, leading high-security
+        development for the Cyber Business and Operations team.Utilized
+        Wireshark for network intrusion detection and conducted reverse
+        engineering to strengthen system security. Recognition: Winner of an
+        in-house OSINT Capture the Flag competition (October 2023),
+        demonstrating cybersecurity and analytical expertise.
 
         <h3>PioneerTech | Software Engineer (Backend)</h3>
         <p><em>Fairfax, VA | Jan 2021 - Jun 2021</em></p>
-        <ul>
-          <li>
-            Full-stack Java Enterprise development for high-security Oracle
-            projects.
-          </li>
-          <li>
-            Enhanced software reliability through modernization of legacy
-            frameworks and database debugging.
-          </li>
-          <li>Primarily backend SLDC agile environment.</li>
-          <li>
-            Led digital transformation of legacy systems for security
-            improvement.
-          </li>
-        </ul>
+        Led full-stack Java Enterprise development for secure Oracle projects,
+        operating within a rigorous Oracle Certified Associate (OCA) environment
+        that enforced strict compliance and best practices in Java development.
+        Improved software reliability through the modernization of legacy
+        systems and robust database debugging, ensuring security and efficiency
+        in a backend-focused Agile environment. Drove digital transformation
+        initiatives, implementing security upgrades across legacy systems—a
+        critical skill for scalable full-stack environments.
 
         <h3>Concept Plus | Software Engineer (Java)</h3>
         <p><em>Fairfax, VA | Mar 2020 - Aug 2020</em></p>
-        <ul>
-          <li>
-            Developed software for the DOEHRS-HC contract supporting DoD
-            personnel health readiness.
-          </li>
-          <li>
-            Managed full stack database backend integration and service layer
-            mechanics.
-          </li>
-          <li>
-            Conducted daily sprints in Agile software development for debugging
-            and enhancements.
-          </li>
-        </ul>
+        Developed backend integrations for the DOEHRS-HC contract supporting DoD
+        personnel health readiness, including database management and service
+        layer mechanics. Participated in Agile sprints for iterative
+        development, an essential practice for effective full-stack
+        collaboration.
 
         <h3>Perspecta Inc | System Engineer</h3>
         <p><em>Chantilly, VA | Jan 2019 - Jun 2019</em></p>
-        <ul>
-          <li>
-            Engineered data solutions using mobile time-location-based data.
-          </li>
-          <li>Researched digital footprint of activity-based intelligence.</li>
-          <li>Integrated blockchain into healthcare data file management.</li>
-          <li>
-            Participated in Agile SAFe & UiPath training to enhance team
-            efficiency.
-          </li>
-        </ul>
+        Engineered data solutions utilizing mobile time-location data for
+        predictive analysis, applying skills in data processing valuable for
+        backend systems. Integrated blockchain for healthcare data,
+        demonstrating secure data handling capabilities.
 
         <h2>Education</h2>
         <p>
@@ -330,12 +329,11 @@
         </p>
       </div>
     </div>
-    
+
     <div class="footer">
       <p>developed and designed in 2024 by Maria Bowser</p>
     </div>
-    
+
     <!-- Your custom script -->
-    
   </body>
 </html>
