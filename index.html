@@ -1,319 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap&family=Noto+Emoji:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Load GSAP and ScrollTrigger from CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://db.onlinewebfonts.com/c/fdfb17b36646fea824cba4309642c59f?family=AUTHENTIC+Sans+Condensed+90" rel="stylesheet">
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Maria Bowser</title>
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: rgb(255, 255, 255);
-        color: #000000;
-        margin: 0;
-        padding: 0;
-      }
 
-      .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 20px;
-        box-sizing: border-box;
-      }
-
-      .left-column,
-      .right-column {
-        padding: 20px;
-        box-sizing: border-box;
-      }
-
-      .left-column {
-        width: 30%;
-      }
-
-      h1{
-
-
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-
-
-      }
-
-      h2 {
-
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-      }
-
-
-        h3 {
-            font-size: 1.2rem;
-            font-weight: 800;
-            margin-bottom: 0px;
-        }
-
-
-      .right-column {
-        width: 65%;
-      }
-      p {
-        font-size: 1rem;
-        line-height: 1.3;
-        font-family: "Inter", sans-serif;"
-        ;}
-
-
-      .profile-pic {
-        width: 100%;
-        height: auto;
-        border-radius: 0;
-        margin-bottom: 20px;
-      }
-
-      .bio {
-        margin-top: 20px;
-      }
-      .em{
-
-        font-style: italic;
-        font-size: 1rem;
-        margin-bottom: 10px;
-
-
-      }
-
-
-      h1,
-      h2,
-      h3 {
-        color: #000000;
-        font-weight: 400;
-      }
-
-      a {
-        color: #7487e9;
-        text-decoration: underline;
-        text-align: left;
-        font-style: italic;
-        display: flex;
-        align-items: space-between;
-      }
-
-      ul {
-        list-style-type: none;
-        padding-left: 5px;
-      }
-
-      ul li {
-        margin-bottom: 10px;
-      }
-      .footer {
-        text-align: right;
-        padding: 1rem;
-        font-size: smaller;
-        opacity: 0.7;
-      }
-      /* Mobile Optimization */
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-          padding: 10px;
-        }
-        container* {
-          padding: 0;
-        }
-        .left-column,
-        .right-column {
-          width: 100%;
-          padding: 0px;
-          border: none;
-        }
-
-        .profile-pic {
-          width: 100%;
-          margin: 0 auto;
-        }
-
-        h1,
-        h2,
-        h3 {
-          text-align: left;
-        }
-        a {
-          display: block;
-          margin-top: 10px;
-          margin-bottom: 10px;
-        }
-
-        ul li {
-          display: contents;
-        }
-
-        ul li::after {
-          font-size: 14px;
-          margin: none;
-          display: contents;
-          content: ", "; /* Add comma and space after each list item */
-        }
-
-        ul li:last-child::after {
-          content: ""; /* Remove the comma after the last list item */
-        }
-
-
-      /* Print-specific styles */
-      @media print {
-        body {
-          background-color: white;
-          color: black;
-          font-size: 12pt;
-        }
-
-        a {
-          text-decoration: none;
-          color: black;
-        }
-
-        .profile-pic {
-          display: none; /* Hide image for printing to save space */
-        }
-
-        .container {
-          width: 100%;
-          margin: 0;
-          padding: 0;
-        }
-
-        .left-column,
-        .right-column {
-          border: none;
-          padding: 0;
-        }
-
-        ul li {
-          font-size: 12pt;
-        }
-      }
-    </style>
+    <!-- Fonts and Styles -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2&family=Azeret+Mono:ital,wght@0,100..900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <!-- Left Column -->
-      <div class="left-column content">
-        <img src="pic_clear.png" alt="my dog and i " class="profile-pic" />
-        <div class="bio">
-          <h2>Maria Bowser</h2>
-          <p>
-            TS/SCI CI Poly Software + Reverse Engineer<br />Northern VA,
-            non-remote OK
-          </p>
-          <a href="mailto:m.sbk@icloud.com" alt="m.sbk@icloud.com" email me </a>
-          <a htref="https://linkedin.com/in/cybrat">linkedin </a>
-          <a href="Bowser_1120.docx" download> resume docx </a> 
-          <a href="Bowser_1120.pdf" downlaod> or pdf </a>
+  
 
-          <h3>Skills</h3>
-          <ul class="box">
+    <div class="fullscreen-text"> maria bowser </div>
+
+      <!-- Left Column -->
+     <div class="container">
+  <div class = "left-column">
+         
+          <nav class="contact-links">
+            <a href="mailto:m.sbk@icloud.com">Email Me</a>
+            <a href="resume_mineee.docx" download>Resume (DOCX)</a>
+            
+          </nav><h2>Professional Summary</h2>
+          <p>
+           full stack engineer specializing in high security systems <br> clearance: ts/sci ci poly 
+      
+          </p>
+          <h3 class="section-title">Skills</h3>
+          <ul class="skills-list ">
             <li>Software Engineering</li>
             <li>Reverse Engineering</li>
-            <li>UX and UI</li>
-            <li>Python, C, Java, JS, HTML, CSS, Go</li>
-            <li>Ghidra, Valgrind, gdb, gcc</li>
-            <li>Linux</li>
-          </ul>
-          <ul class="box">
-            <li>Bash scripting</li>
-            <li>Networking</li>
+            <li>Web Development</li>
+            <li>Agile Methodology</li>
+            <li>Secure Software Design</li>
             <li>Cybersecurity</li>
-            <li>3D / AI Rendering</li>
+            <li>3D/AI Rendering</li>
             <li>Wireshark</li>
             <li>Russian</li>
             <li>Japanese</li>
-            <li>Communications</li>
-            <li>Computer Networking</li>
           </ul>
-        </div>
-      </div>
+        
+      </aside></div>
 
       <!-- Right Column -->
-      <div class="right-column" data-speed="0.8">
-        <p>
-          With 5 years of experience in full-stack software engineering, Maria has a proven track record in both client-facing and highly technical roles, specializing in Agile methodology, cybersecurity, and high-security software development within the Intelligence Community. Recently, she expanded her skill set by contributing to reverse engineering initiatives on an operations team, building on her expertise in distributed networks, big data systems, and secure environments. Maria combines technical precision with strong communication skills to deliver effective solutions in complex, high-stakes settings.
+      <main class="right-column ">
+        <section class="summary">
+          
+    
+          <h2>Experience</h2>
 
-        </p>
-        <h2>Employment Experience</h2>
-        <ul>
-<li><strong>Technical Skills</strong><span style="font-weight: 400;">: Full-Stack Software&nbsp; Development, Reverse Engineering, Secure Software Design, Big Data Systems, Distributed Networks, UX/UI development</span></li>
-<li><strong>Programming Languages</strong><span style="font-weight: 400;">: Python, C, Java, Go, JavaScript, HTML, CSS, Assembly (x86/x64)</span></li>
-<li><strong>Tools</strong><span style="font-weight: 400;">: Linux, Ghidra, gdb, Valgrind, Wireshark, Bash Scripting, Docker, Kubernetes, VSCode&nbsp;</span></li>
-<li><strong>Cybersecurity Expertise</strong><span style="font-weight: 400;">: Vulnerability Research, OSINT, Network Analysis, Intrusion Detection</span></li>
-<li><strong>Languages</strong><span style="font-weight: 400;">: Japanese and Russian</span></li>
-<li><strong>Methodologies</strong><span style="font-weight: 400;">: Agile Development, CI/CD, Cloud-Based Development</span></li>
-</ul>
-<p>&nbsp;</p>
-<p><strong>Reverse</strong> <strong>&nbsp;Engineer and Vulnerability Researcher</strong> <strong>Verite Group Inc,</strong><em><span style="font-weight: 400;"> Dulles, VA | July 2024 &ndash; October 2024</span></em></p>
-<ul>
-<li><span style="font-weight: 400;">Led reverse engineering initiatives for the cyber operations team, developing a specialized toolchain using Ghidra, Valgrind, gdb, gcc, and advanced networking tools to identify vulnerabilities in mesh architectures, distributed systems, and embedded systems.</span></li>
-<li><span style="font-weight: 400;">Automated decompilation of complex binaries by designing Python and Bash scripts for large-scale analysis, significantly accelerating vulnerability assessments across distributed architectures.</span></li>
-<li><span style="font-weight: 400;">Delivered enterprise-grade solutions in air-gapped environments, ensuring secure, isolated system development critical for mission success.</span></li>
-<li><span style="font-weight: 400;">Contributed linguistic expertise (Russian and Japanese) and technical skills to support diverse, high-stakes cybersecurity operations involving international software.</span></li>
-</ul>
-<p>&nbsp;</p>
-<p><strong>Software Engineering Consultant D</strong><strong>eloitte Consulting, </strong><span style="font-weight: 400;">DC Metropolitan Area | June 2021 &ndash; June 2024</span></p>
-<ul>
-<li><span style="font-weight: 400;">Performed full-stack software development in secure, air-gapped environments, delivering high-security solutions that optimized processing speed by 700% and improved backend performance.</span></li>
-<li><span style="font-weight: 400;">Designed and implemented modular, responsive web applications using CSS, JavaScript, and HTML, enhancing user experience and ensuring scalability for cybersecurity operations.</span></li>
-<li><span style="font-weight: 400;">Developed Python-based command-and-control (C2) servers for Red Team operations, streamlining command execution and backend automation in secure environments.</span></li>
-<li><span style="font-weight: 400;">Utilized Wireshark and other network analysis tools for intrusion detection, conducting reverse engineering to identify and mitigate security vulnerabilities.</span></li>
-<li><span style="font-weight: 400;">Collaborated on full-stack development with a team of engineers, ensuring Agile delivery of secure software solutions tailored to client needs.</span></li>
-<li><strong>Recognition</strong><span style="font-weight: 400;">: Winner of Deloitte&rsquo;s OSINT Capture the Flag competition (October 2023), showcasing exceptional analytical and cybersecurity expertise.</span></li>
-</ul><p>&nbsp;</p>
-<p><strong>Software Engineer (Java) PioneerTech,</strong><span style="font-weight: 400;"> Fairfax, VA | Jan 2021 - Jun 2021</span></p>
-<ul>
-<li><span style="font-weight: 400;">Full-stack Java Enterprise development for secure Oracle-based projects, utilizing the WildFly/JBOSS stack in a compliance-driven Oracle Certified Associate (OCA) environment.</span></li>
-<li><span style="font-weight: 400;">Modernized legacy systems, enhancing software reliability and performance through rigorous database debugging and optimization.</span></li>
-<li><span style="font-weight: 400;">Delivered secure and efficient solutions in an Agile environment by implementing robust security upgrades across legacy architectures.</span></li>
-<li><span style="font-weight: 400;">Collaborated with cross-functional teams to drive digital transformation initiatives, ensuring adherence to industry security standards and best practices.</span></li>
-<li><span style="font-weight: 400;">Contributed to backend performance optimization, handling high-volume enterprise data processing and integration tasks.</span></li>
-</ul>
-<p>&nbsp;</p>
-<p><strong>Software Engineer (Java) Concept Plus,</strong><span style="font-weight: 400;"> Fairfax, VA | Mar 2020 - Aug 2020&nbsp;</span></p>
-<ul>
-<li><span style="font-weight: 400;">Developed backend integrations and service-layer mechanics for the DOEHRS-HC contract, supporting DoD personnel health readiness systems.</span></li>
-<li><span style="font-weight: 400;">Managed massive sensitive data pipelines, ensuring scalability, compliance, and efficient processing of critical DoD legacy systems.</span></li>
-<li><span style="font-weight: 400;">Utilized Java Enterprise tools, Spring Framework, and RESTful API design to modernize backend systems and ensure seamless integration.</span></li>
-</ul>
-<p><span style="font-weight: 400;">&nbsp;</span></p>
-<p><strong>&nbsp;&nbsp;&nbsp;System Engineer Perspecta Inc, Chantilly, VA </strong><span style="font-weight: 400;">| Summer 2018, Jan 2019 - Jun 2019</span></p>
-<ul>
-<li><span style="font-weight: 400;">Engineered data solutions leveraging mobile time-location data to deliver predictive analysis for SIGINT and Activity-Based Intelligence workflows.</span></li>
-<li><span style="font-weight: 400;">Presented technical findings regularly to leadership, focusing on applications of IoT in operational intelligence scenarios.</span></li>
-<li><span style="font-weight: 400;">Spearheaded blockchain research and its implementation in public health systems, evaluating use cases for secure and decentralized data handling.</span></li>
-<li><span style="font-weight: 400;">Utilized analytical tools and scripting to process and visualize large datasets, enabling actionable insights for intelligence application</span></li>
-</ul>
-<h3><span style="font-weight: 400;">Education and Certifications</span></h3>
-<p><strong>Virginia Tech</strong><span style="font-weight: 400;"> - B.A. in Economics with a Concentration in Computer Science &amp; Minor in Statistics (Dec 2018)</span></p>
-<p><span style="font-weight: 400;">Certifications: CompTIA Security+, Full Stack Boot Camp (Udacity), Cybersecurity Software Engineering (Deloitte, Oct 2023)</span></p>
-<p><span style="font-weight: 400;">Language Proficiency: Japanese , Russian</span></p>
-<p>&nbsp;</p></div></div>
+          <!-- Job 1 -->
+          <article class="job">
+            <header>
+              <h3 class="job-title">Reverse Engineer and Vulnerability Researcher</h3>
+              <div class="job-info">
+                <span class="company">Verite Group Inc.</span>
+                <span class="location">Dulles, VA</span>
+                <span class="date">July 2024 – October 2024</span>
+              </div>
+            </header>
+            <ul class="job-responsibilities">
+              <li>Led reverse engineering initiatives for the cyber operations team, developing a specialized toolchain using Ghidra, Valgrind, gdb, and gcc to identify vulnerabilities in mesh architectures and distributed systems.</li>
+              <li>Automated decompilation of complex binaries with Python and Bash scripts, improving vulnerability assessments.</li>
+              <li>Delivered enterprise-grade solutions in air-gapped environments, ensuring secure system development for critical missions.</li>
+              <li>Contributed linguistic expertise (Russian and Japanese) to support diverse international cybersecurity operations.</li>
+            </ul>
+          </article>
 
-    <div class="footer">
-      <p>developed and designed in 2024 by Maria Bowser</p>
+          <!-- Job 2 -->
+          <article class="job">
+            <header>
+              <h3 class="job-title">Software Engineering Consultant</h3>
+              <div class="job-info">
+                <span class="company">Deloitte Consulting</span>
+                <span class="location">DC Metropolitan Area</span>
+                <span class="date">June 2021 – June 2024</span>
+              </div>
+            </header>
+            <ul class="job-responsibilities">
+              <li>Performed full-stack software development in secure, air-gapped environments, optimizing processing speed by 700%.</li>
+              <li>Designed and implemented modular, responsive web applications, enhancing user experience and scalability.</li>
+              <li>Developed Python-based command-and-control (C2) servers for Red Team operations, streamlining backend automation.</li>
+              <li>Utilized Wireshark for intrusion detection and reverse engineering to identify and mitigate vulnerabilities.</li>
+              <li>Collaborated on Agile delivery of secure software solutions tailored to client needs.</li>
+              <li>Recognized as the winner of Deloitte’s OSINT Capture the Flag competition (October 2023).</li>
+            </ul>
+          </article>
+
+          <!-- Job 3 -->
+          <article class="job">
+            <header>
+              <h3 class="job-title">Software Engineer (Java)</h3>
+              <div class="job-info">
+                <span class="company">PioneerTech</span>
+                <span class="location">Fairfax, VA</span>
+                <span class="date">January 2021 – June 2021</span>
+              </div>
+            </header>
+            <ul class="job-responsibilities">
+              <li>Full-stack Java Enterprise development for secure Oracle-based projects, utilizing the WildFly/JBOSS stack.</li>
+              <li>Modernized legacy systems, enhancing software reliability and performance through rigorous database debugging.</li>
+              <li>Delivered secure and efficient solutions in Agile environments by implementing robust security upgrades.</li>
+              <li>Collaborated with cross-functional teams to drive digital transformation initiatives and ensure compliance.</li>
+            </ul>
+          </article>
+
+          <!-- Job 4 -->
+          <article class="job">
+            <header>
+              <h3 class="job-title">Software Engineer (Java)</h3>
+              <div class="job-info">
+                <span class="company">Concept Plus</span>
+                <span class="location">Fairfax, VA</span>
+                <span class="date">March 2020 – August 2020</span>
+              </div>
+            </header>
+            <ul class="job-responsibilities">
+              <li>Developed backend integrations for the DOEHRS-HC contract, supporting DoD personnel health readiness systems.</li>
+              <li>Managed massive sensitive data pipelines, ensuring scalability, compliance, and efficient processing.</li>
+              <li>Utilized Java Enterprise tools, Spring Framework, and RESTful API design to modernize backend systems.</li>
+            </ul>
+          </article>
+
+          <!-- Job 5 -->
+          <article class="job">
+            <header>
+              <h3 class="job-title">System Engineer</h3>
+              <div class="job-info">
+                <span class="company">Perspecta Inc.</span>
+                <span class="location">Chantilly, VA</span>
+                <span class="date">Summer 2018, January 2019 – June 2019</span>
+              </div>
+            </header>
+            <ul class="job-responsibilities">
+              <li>Engineered data solutions leveraging mobile time-location data to deliver predictive analysis for SIGINT workflows.</li>
+              <li>Presented technical findings regularly to leadership, focusing on IoT applications in intelligence scenarios.</li>
+              <li>Spearheaded blockchain research and its implementation in public health systems for decentralized data handling.</li>
+            </ul>
+          </article>
+      
+          <h2>Education and Certifications</h2>
+          <article class="education-item">
+            <header>
+              <h3 class="school">Virginia Tech</h3>
+              <p class="degree">B.A. in Economics with a Concentration in Computer Science, Minor in Statistics</p>
+              <p class="graduation-date">December 2018</p>
+            </header>
+          </article>
+          <ul class="certifications">
+            <li>CompTIA Security+</li>
+            <li>Full Stack Boot Camp (Udacity)</li>
+            <li>Cybersecurity Software Engineering (Deloitte, October 2023)</li>
+          </ul>
+        </section>
+      </main>
     </div>
 
-    <!-- Your custom script -->
+
+    <footer class="footer">
+      <p>Developed and designed in 2024 by Maria Bowser</p>
+    </footer>
   </body>
+</html>
+    <!-- Your custom script -->
+
+<script>
+  // Wait for the DOM to be fully loaded
+  window.addEventListener('DOMContentLoaded', () => {
+    // Animate the heading
+    gsap.from(".animated-text", {
+      duration: 1.5,  // Animation duration
+      y: 50,         // Move 50px vertically
+      opacity: 0,    // Start from 0 opacity
+      ease: "power2.out", // Smooth easing effect
+    });
+
+    // Apply effect-4 to h2 element
+    effect4.applyTo(document.querySelector('.animated-text'));
+  });
+</script>
+<script>// GSAP Hover Animation
+  document.querySelectorAll('.hover-effect').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      gsap.to(el.querySelectorAll('.char'), {
+        opacity: 1, // Adjust property
+        duration: 0.3,
+        y: -20, // Example movement
+        stagger: 0.05, // Slight delay between characters
+      });
+    });
+  
+    el.addEventListener('mouseleave', () => {
+      gsap.to(el.querySelectorAll('.char'), {
+        opacity: 0,
+        duration: 0.3,
+        y: 0,
+        stagger: 0.05,
+      });
+    });
+  });</script>
+</body>
 </html>

@@ -1,0 +1,368 @@
+/* Reset and Box Sizing */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  background-color: #f0f0f0; /* Optional: Add a background color */
+  background-color: #f0f0f0; /* Optional: Add a background color */
+
+
+}
+@import url(https://db.onlinewebfonts.com/c/fdfb17b36646fea824cba4309642c59f?family=AUTHENTIC+Sans+Condensed+90);
+@import url(https://db.onlinewebfonts.com/c/82b778d1b069157bf6b2e32dc4e1e3f1?family=Neue+Machina);/* Root Variables */
+:root {
+  font-size: 1em;
+  --page-padding: 10rem;
+  --color-text: #000;
+  --color-bg: #fff;
+  --color-link: rgba(0, 0, 0, 0.8);
+  --color-link-hover: #000;
+  --color-list-item: #000;
+  --color-title: #000;
+  --color-number: #000;
+  --color-bg-effect: white;
+  --blendmode-effect: difference;
+  --bg-blur: 0px;
+  --font-size-list-item: 18px;
+
+  /* Typography Variables */
+  --font-size-h1: 2.5rem; /* Desktop */
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-p: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+:host {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 14px;
+}
+/* General Styles */
+body {
+  margin: 0;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family:'Trade Gothic Next LT Pro';
+  font-weight: 300;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+.fullscreen-text {
+    justify-content: center;
+    align-items: center;
+    font-size: 12rem;
+    font-weight: 100;
+    text-align: Left;
+    word-wrap: break-word;
+    line-height: .8;
+    color: #333;
+    -webkit-font-smoothing: subpixel-antialiased;
+    letter-spacing: -4px;
+    font-family: arial;
+  }
+/* Typography */
+h1 {
+	position: fixed; /* Stays at the top of the page */
+	top: 0;
+	left: 0;
+	width: 100%; /* Full width of the page */
+	text-align: center; /* Center-align the text */
+	font-size: 5vw; /* Font size scales with viewport width */
+	background: white; /* Optional: Add background for contrast */
+	z-index: 1000; /* Ensures it's above other elements */
+	padding: 1vh 0; /* Add some padding for better spacing */
+}
+
+h2 {
+  font-family: 'AUTHENTIC Sans Condensed 90';
+  
+  font-size: var(--font-size-h2);
+  color: var(--color-title);
+  margin-bottom: 0.8rem;
+  font-weight:100;
+  text-transform: noen;
+
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  color: var(--color-title);
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid black;
+}
+
+p {
+  font-size: var(--font-size-p);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Layout */
+.container {
+  display:flex ;
+  flex-direction: row;
+  min-height: 100vh;
+  justify-content: space-around;
+  padding: 1rem 0px;
+  
+}
+.fixed-casing {
+
+}
+.frame {
+	max-width: 100vw; /* Adjust the width as needed */
+	margin: 2rem auto; /* Center the frame and add some margin */
+	padding: 2rem; /* Add padding inside the frame */
+	background-color: var(--color-bg); /* Background color of the frame */
+	display:flex;
+	flex-direction: row;
+	border-radius: 10px; /* Optional: Add rounded corners */
+	border: 1px solid #ddd; /* Optional: Add a border */
+  }
+.left-column {
+  width: 30%;
+  padding: 30px 10px
+}
+
+.right-column {
+  width: 70%;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+}
+
+/* Lists */
+.skills-list,
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li,
+.list__item {
+  margin-bottom: 0.5rem;
+  font-size: .8rem;
+}
+
+/* Links */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-link-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid red;
+}
+
+/* Hover Effect */
+.hover-effect {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.word {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease-out;
+}
+
+.hover-effect:hover .word {
+  transform: translateY(-100%);
+}
+
+/* Job Section */
+
+
+
+.li{
+
+	list-style-position: inside;
+
+}
+
+
+.job-title {
+  font-size: 1.2rem;
+  color: var(--color-title);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Images */
+@media (max-width: 768px) {
+  .profile-pic {
+    max-width: 150px;
+  }
+}
+
+
+/* Utility Classes */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: row;;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-auto {
+  grid-auto-rows: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.padding-default {
+  padding: var(--page-padding);
+}
+
+::selection {
+	background: #f7fcbe;
+	color: #753f3f;
+  }
+  ::-moz-selection {
+	background: #b900ed;
+	color: #fff;
+  }
+  .contact-links{
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.contact-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    /* border-radius: 25px; */
+    /* text-transform: uppercase; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-decoration: revert-layer;
+    font-color: blue;
+    background-color: none;
+    color: #005eff;
+    text-align: center;
+    font-weight: 600;
+    /* border: .01px solid black; */
+    transition: background-color 0.5s ease;
+}
+
+
+.contact-links a:hover {
+	background-color: rgb(237, 246, 141);
+}
+
+  
+          .containerone {
+              display: flex;
+              flex-wrap: wrap; /* Allow items to wrap */
+              gap: 10px; /* Spacing between items */
+          }
+  
+          .item {
+              background-color: rgb(208, 220, 224);
+              border: 1px solid #ccc;
+              padding: 20px;
+              text-align: center;
+          }
+  
+          /* Top Row (4 columns) */
+          .item:nth-child(1) { 
+              flex: 1 0 100%; /* Each item takes 25% minus the gap */
+              /* OR */
+              /* width: calc(25% - 10px); */ 
+          }
+          .item:nth-child(-n+5) { 
+            flex: 1 0 calc(25% - 10px); /* Each item takes 25% minus the gap */
+            /* OR */
+            /* width: calc(25% - 10px); */ 
+        }
+  
+          /* Middle Row (1 column) */
+          .item:nth-child(6) {
+              flex: 1 0 100%; /* Take up full width */
+              /* OR */
+              /* width: 100%; */ 
+          }
+  
+          /* Bottom Row (3 columns) */
+          .item:nth-child(n+7) {
+              flex: 1 0 calc(33.33% - 10px); /* Each item takes 33.33% minus the gap */
+              /* OR */
+              /* width: calc(33.33% - 10px); */ 
+          }
+          /* text wihtin an item */
+          .item p {
+              font-size: 1rem;
+              color: #333;
+              text-align: left;
+              text-transform: uppercase;
+
+          }
+ 

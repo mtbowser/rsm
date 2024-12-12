@@ -1,0 +1,15 @@
+.hover-effect {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .word {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .hover-effect:hover .word {
+    transform: translateY(-100%);
+  }
